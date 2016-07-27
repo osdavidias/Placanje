@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="<a rel="nofollow" href="http://www.w3.org/2001/XMLSchema-instance" class="vglnk"><span>http</span><span>://</span><span>www</span><span>.</span><span>w3</span><span>.</span><span>org</span><span>/</span><span>2001</span><span>/</span><span>XMLSchema</span><span>-</span><span>instance</span></a>" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <placanje>
+                <active>1</active>
+                <title>Placanje</title>
+                <order_status>u_tijeku</order_status>
+                <instructions>Upute.</instructions>
+                <model>Placanje\Plati\Model\Placanje</model>
+                <group>offline</group>
+            </placanje>
+        </payment>
+    </default>
+</config>

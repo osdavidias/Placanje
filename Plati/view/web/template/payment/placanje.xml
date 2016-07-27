@@ -1,0 +1,33 @@
+
+<div class="placanje-method" data-bind="css: {'_active': (getCode() == isChecked())}">
+    <div class="placaje-method-title field choice">
+        <input type="radio"
+               name="placanje[method]"
+               class="radio"
+               data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
+        <label data-bind="attr: {'for': getCode()}" class="label"><span data-bind="text: getTitle()"></span></label>
+    </div>
+    <div class="placanje-method-content">
+         
+        <div class="placanje-method-billing-address">
+        </div>
+        <div class="checkout-agreements-block">
+             
+        </div>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button class="action primary checkout"
+                        type="submit"
+                        data-bind="
+                        click: placeOrder,
+                        attr: {title: $t('Naruči')},
+                        css: {disabled: !isPlaceOrderActionAllowed()},
+                        enable: (getCode() == isChecked())
+                        "
+                        disabled>
+                    <span data-bind="i18n: 'Naruči'"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
